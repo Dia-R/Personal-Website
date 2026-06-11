@@ -1,29 +1,71 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Nadia Rahman Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | Designer | Your Title</p>
-    </header>
-    
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>Description of your first project.</p>
-        </div>
-        <!-- Add more projects -->
-    </section>
-    
-    <footer>
-        <p>© 2024 Your Name</p>
-    </footer>
-</body>
+<nav class = "nav">
+    <a href = "/" class = "nav-name" >Nadia Rahman</a>
+    <ul class = "nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+    </ul>
+</nav>
 </html>
+
+
+<section class = "hero">
+    <p class = "label"> Introduction</p>
+    <h1 class = "hero-heading">Hey, I'm<br><em>Nadia.</em></h1>
+    <p class="hero-bio">
+        I'm an Electrical Engineering graduate based in Singapore. 
+      </p>
+    <div class = "hero-actions">
+        <a href="projects.html" class="btn-primary">View Projects</a>
+        <a href="education.html" class="btn-ghost">Download Resumé </a>
+</section>
+
+<hr class = "divider">
+
+<section class = "section">
+    <p class = "label">Highlighted Projects</p>
+
+    <div class = "work-grid">
+ 
+        <article class="work-card">
+            <span class="work-tag">React Native · BLE Integration</span>
+            <h2 class="work-title">Kinetix Stroke Rehabilitation System</h2>
+            <p class="work-desc">
+              Led UI development for a robotic lower-limb rehab device for final-year capstone project. 
+              Built React Native cross-platform app with live BLE sensor streaming, gamified
+              exercises, and session tracking that was validated by physiotherapists and volunteers
+              for usability.
+            </p>
+            <a href="https://cde4301-kinetix.github.io/kinetix-final/index.html" class="work-link">Learn more →</a>
+          </article>
+    </div>
+</section>
+
+<hr class = "divider">
+
+<section class = "section">
+    <p class = "label">Contact</p>
+  
+</section>
+
+
+<footer class="footer">
+    <span>© 2026 Nadia Rahman</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
