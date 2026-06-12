@@ -92,7 +92,11 @@ ul { list-style: none; }
 
 .hero {
     padding-top: 5rem;
+    min-height: 100vh;
     padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .hero-heading {
@@ -216,3 +220,127 @@ ul { list-style: none; }
     color: var(--faded-colour);
     letter-spacing: 0.04em;
   }
+
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 0.5rem;
+}
+
+.about-me p {
+    font-size: 14px;
+    color: var(--text-mute-colour);
+    line-height: 1.8;
+    padding-bottom: 1.5rem;
+}
+
+.about-me h1 {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.5vw, 32px);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 1.4rem;
+}
+
+#typewriter::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#typewriter.done::after {
+    display: none;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.skill-tag {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-mute-colour);
+    border: 0.5px solid var(--faded-colour);
+    border-radius: 10px;
+    padding: 5px 12px;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.skill-tag:hover {
+    background:var(--faded-colour);
+    border-color: var(--faded-colour);
+    color: var(--text-colour);
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    margin-top: 1rem;
+}
+
+.timeline-spine {
+    position: absolute;
+    left: 0; right: 0;
+    top: 50%;
+    height: 0.5px;
+    background: var(--faded-colour);
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100px;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: column-reverse;
+    transform: translateY(-45%);
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: column;
+    transform: translateY(47%);
+}
+
+.timeline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-mute-colour);
+    flex-shrink: 0;
+}
+.timeline-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0.3rem 0 0.15rem;
+}
+
+.timeline-sub {
+    font-size: 11px;
+    color: var(--text-mute-colour);
+}
+
+.timeline-year {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--faded-colour);
+    text-transform: uppercase;
+    margin: 0.3rem 0;
+}
